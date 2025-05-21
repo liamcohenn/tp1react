@@ -1,46 +1,34 @@
-import "./App.css";
-import Formulario from "./components/Form";
-import Cita from "./components/Cita.jsx";
-import Listado from "./components/Listado.jsx";
+import React, { useState } from 'react';
+import Formulario from './componentes/Formulario';
+import Listado from './componentes/Listado';
+import './App.css';
 
 function App() {
+  const [citas, setCitas] = useState([]);
+
+  const agregarCita = (nuevaCita) => {
+    setCitas([...citas, nuevaCita]);
+  };
+
+  const eliminarCita = (index) => {
+    const nuevasCitas = citas.filter((_, i) => i !== index);
+    setCitas(nuevasCitas);
+  };
+
   return (
-    <>
+    <div>
       <h1>ADMINISTRADOR DE PACIENTES</h1>
       <div className="container">
         <div className="row">
           <div className="one-half column">
-            <h2>Crear mi Cita</h2>
-            <Formulario />
+            <Formulario onAgregarCita={agregarCita} />
           </div>
           <div className="one-half column">
-            <Listado>
-              <Cita
-                nombre="Nina"
-                dueno="Martin"
-                fecha="2021-08-05"
-                hora="08:20"
-                sintomas="Le duele la pierna"
-              />
-              <Cita
-                nombre="Sifon"
-                dueno="Flecha"
-                fecha="2023-08-05"
-                hora="09:24"
-                sintomas="Duerme mucho"
-              />
-              <Cita
-                nombre="Floki"
-                dueno="Ari"
-                fecha="2023-08-05"
-                hora="16:15"
-                sintomas="No está comiendo"
-              />
-            </Listado>
+            <Listado citas={citas} onEliminarCita={eliminarCita} />
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 }
 

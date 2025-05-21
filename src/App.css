@@ -1,121 +1,33 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+html {
+  min-height: 100%;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  background-image: linear-gradient(-225deg, #A445B2 0%, #D41872 52%, #FF0066 100%);
+  min-height: 100%;
+  padding-bottom: 5rem;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
-}
-
-
-
-/* App container */
-.app-container {
-  text-align: center;
-  padding: 20px;
-}
-
-.contenido {
-  display: flex;
-  justify-content: space-between;
-  gap: 20px;
-}
-
-/* Formulario */
-.formulario {
-  width: 45%;
-  border: 2px solid orange;
-  padding: 10px;
-  border-radius: 10px;
-}
-
-.formulario h2 {
-  margin-bottom: 10px;
-}
-
-.formulario form {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.formulario input,
-.formulario textarea {
-  padding: 8px;
-  font-size: 16px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-}
-
-.formulario button {
-  background-color: #007bff;
+h1, h2 {
   color: white;
-  padding: 10px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
+  padding: 3rem 0;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: 'Staatliches', cursive;
+  letter-spacing: 1px;
 }
 
-.formulario button:hover {
-  background-color: #0056b3;
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
 }
 
-/* Listado */
-.listado {
-  width: 45%;
-  border: 2px solid lightblue;
-  padding: 10px;
-  border-radius: 10px;
+.row {
+  display: flex;
+  flex-wrap: wrap;
 }
 
-.listado h2 {
-  margin-bottom: 10px;
-}
-
-/* Cita */
-.cita {
-  border: 1px solid gray;
-  padding: 10px;
-  margin-bottom: 10px;
-  text-align: left;
-  border-radius: 5px;
-  background-color: #f9f9f9;
-}
-
-.cita p {
-  margin: 5px 0;
-}
